@@ -1,0 +1,19 @@
+.reward {
+  margin-top: 2rem;
+}
+.reward__title {
+  font-size: 1.25rem;
+}
+.video__container {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .video__container {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+}

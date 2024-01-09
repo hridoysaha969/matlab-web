@@ -1,0 +1,23 @@
+.footer__section {
+  border-top: 1px solid #303030;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  font-size: 0.75rem;
+  margin-top: 2rem;
+}
+.footer__section p {
+  display: flex;
+  align-items: center;
+  margin-left: 0.3rem;
+}
+.footer__section p svg {
+  font-size: 0.85rem;
+}
+.footer__section p a {
+  text-decoration: none;
+  color: #00a2ff;
+  margin-left: 0.5rem;
+  font-weight: 500;
+}

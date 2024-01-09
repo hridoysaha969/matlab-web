@@ -1,0 +1,28 @@
+.video {
+  background: #fff;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  box-shadow: 2px 2px 10px rgba(32, 2, 80, 0.2);
+  width: 16rem;
+}
+.video__body {
+  padding: 0.75rem 1rem;
+}
+.thumb__img {
+  width: 100%;
+  height: max-content;
+  border-radius: 1rem 1rem 0 0;
+  -webkit-border-radius: 1rem 1rem 0 0;
+  -moz-border-radius: 1rem 1rem 0 0;
+  -ms-border-radius: 1rem 1rem 0 0;
+  -o-border-radius: 1rem 1rem 0 0;
+}
+.btn_video {
+  background: #00a2ff;
+  color: #fff;
+  display: inline-block;
+  margin-top: 1rem;
+}

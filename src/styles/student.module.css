@@ -1,0 +1,51 @@
+.students {
+  margin: 2rem 0;
+}
+.students__title {
+  font-size: 1.25rem;
+}
+.student__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 1rem;
+  grid-gap: 1rem;
+}
+.student__card {
+  background: #fff;
+  border-radius: 0.65rem;
+  -webkit-border-radius: 0.65rem;
+  -moz-border-radius: 0.65rem;
+  -ms-border-radius: 0.65rem;
+  -o-border-radius: 0.65rem;
+  padding: 1rem 0.75rem;
+  box-shadow: 1px 1px 5px rgba(138, 138, 138, 0.5);
+  cursor: pointer;
+  align-self: baseline;
+}
+.s__name {
+  color: #100953;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+.batch__id {
+  color: #807e7e;
+  font-size: 0.75rem;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #807e7e;
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .student__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 576px) {
+  .student__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

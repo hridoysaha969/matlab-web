@@ -1,0 +1,80 @@
+.video__player {
+  margin-top: 2rem;
+}
+.video__player div {
+  margin: 0 auto;
+}
+.note {
+  margin-top: 2rem;
+  font-style: italic;
+  font-size: 0.85rem;
+  background-color: rgba(207, 67, 57, 0.3);
+  width: fit-content;
+}
+.note span {
+  background-color: #2050ec;
+  color: #fff;
+}
+.note .note__mark {
+  background: rgba(237, 241, 17, 0.4);
+  color: #000;
+  font-size: 0.95rem;
+  font-style: normal;
+}
+
+.about__mentor {
+  margin-top: 2rem;
+}
+.about__mentor .title {
+  font-size: 1.25rem;
+  color: #100953;
+  margin-bottom: 1rem;
+}
+.about__mentor p {
+  display: flex;
+  align-items: center;
+}
+.about__mentor .name,
+.about__mentor .name svg {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #5e00ac;
+}
+.about__mentor p span,
+.about__mentor p a {
+  display: inline-block;
+  margin-left: 0.75rem;
+}
+.about__mentor .category {
+  margin-top: -0.3rem;
+  font-size: 0.85rem;
+  color: rgb(32, 187, 110);
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+.about__mentor .category svg {
+  font-size: 0.85rem;
+}
+.about__mentor .email,
+.about__mentor .website {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #2050ec;
+}
+.about__mentor .website a {
+  text-decoration: none;
+  color: #2050ec;
+}
+
+@media screen and (max-width: 768px) {
+  .video__player div {
+    width: 400px !important;
+    height: 250px !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .video__player div {
+    width: 300px !important;
+    height: 180px !important;
+  }
+}
