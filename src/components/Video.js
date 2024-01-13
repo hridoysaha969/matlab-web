@@ -6,7 +6,7 @@ function Video({ videoData }) {
   return (
     <div className={classes.video}>
       <Image
-        src={`https://img.youtube.com/vi/${videoData.videoId}/default.jpg`}
+        src={`https://img.youtube.com/vi/${videoData.videoId}/maxresdefault.jpg`}
         className={classes.thumb__img}
         width={100}
         height={100}
