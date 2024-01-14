@@ -1,4 +1,5 @@
 "use client";
+import Notice from "@/components/Notice";
 import StudentDataEntry from "@/components/StudentDataEntry";
 import StudentResultEntry from "@/components/StudentResultEntry";
 import classes from "@/styles/dashboard.module.css";
@@ -26,6 +27,7 @@ function Dashboard() {
       </div>
 
       {resultMood ? <StudentResultEntry /> : <StudentDataEntry />}
+      <Notice />
     </div>
   );
 }

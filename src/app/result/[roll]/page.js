@@ -8,6 +8,7 @@ import { ref, get } from "firebase/database";
 
 function page({ params }) {
   const [resultObj, setResultObj] = useState([]);
+  const [projectObj, setProjectObj] = useState([]);
   const [singleStudent, setSingleStudent] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -47,8 +48,19 @@ function page({ params }) {
         console.log(err.message);
       }
     }
+    async function fetchProject() {
+      const rsltRef = ref(db, `results/${params.roll}/project`);
+      try {
+        const snapShot = await get(rsltRef);
+        const result = Object.entries(snapShot.val()).map(([key, val]) => val);
+        await setProjectObj(result);
+      } catch (err) {
+        console.log(err.message);
+      }
+    }
 
     fetchResult();
+    fetchProject();
   }, []);
 
   return !loading ? (
@@ -99,9 +111,14 @@ function page({ params }) {
               </tr>
             </thead>
             <tbody>
-              <tr className={classes.invalid__feedback}>
-                <td colSpan="3">Not published yet!</td>
-              </tr>
+              {projectObj &&
+                projectObj.map((res, ind) => (
+                  <tr key={ind}>
+                    <td>{ind + 1}</td>
+                    <td>{res.examName}</td>
+                    <td>{res.resultNumber}</td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>

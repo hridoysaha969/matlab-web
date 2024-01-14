@@ -1,0 +1,52 @@
+.notice__container {
+  margin-top: 2rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+}
+.notice__title {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+.input__wrap {
+  display: flex;
+  flex-direction: column;
+}
+.input__wrap textarea {
+  outline: none;
+  border: 1px solid #17db9a;
+  padding: 0.65rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 0.4rem;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+  width: 70%;
+}
+.btn__submit {
+  border: none;
+  outline: none;
+  padding: 0.75rem 1.25rem;
+  text-transform: capitalize;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background: #17db9a;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 576px) {
+  .input__wrap textarea {
+    width: 90%;
+  }
+}
