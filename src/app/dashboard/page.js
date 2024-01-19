@@ -1,4 +1,5 @@
 "use client";
+import AddImage from "@/components/AddImage";
 import Notice from "@/components/Notice";
 import StudentDataEntry from "@/components/StudentDataEntry";
 import StudentResultEntry from "@/components/StudentResultEntry";
@@ -28,6 +29,7 @@ function Dashboard() {
 
       {resultMood ? <StudentResultEntry /> : <StudentDataEntry />}
       <Notice />
+      <AddImage />
     </div>
   );
 }
