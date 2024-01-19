@@ -60,7 +60,7 @@ function AddImage() {
             className={classes.btn__submit}
             disabled={loading}
           >
-            Submit
+            Upload
           </button>
         </form>
       </div>

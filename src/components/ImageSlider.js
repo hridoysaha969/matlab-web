@@ -40,7 +40,7 @@ const ImageSlider = () => {
 
   return (
     <div>
-      <h2 className={classes.slider__title}>Events</h2>
+      <h2 className={classes.slider__title}>Events </h2>
       <div className={classes.slider__wrapper}>
         {loading && <Spinner />}
         <Slider {...settings}>
