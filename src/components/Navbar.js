@@ -1,4 +1,4 @@
-import { Home, Assignment } from "@mui/icons-material";
+import { Home, Assignment, NotificationsActive } from "@mui/icons-material";
 import classes from "@/styles/navbar.module.css";
 import Link from "next/link";
 function Navbar() {
@@ -17,6 +17,10 @@ function Navbar() {
             <Link href="/result">
               <Assignment />
               <small>Result</small>
+            </Link>
+            <Link href="/notice">
+              <NotificationsActive />
+              <small>Notice</small>
             </Link>
           </div>
         </div>

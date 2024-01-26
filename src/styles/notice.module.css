@@ -74,9 +74,16 @@
 .input__wrap .file__name {
   margin-top: 10px;
 }
+.invalid__feedback {
+  margin-bottom: 0.4rem;
+  color: #e00232;
+  font-weight: 500;
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+}
 
 @media screen and (max-width: 576px) {
   .input__wrap textarea {
-    width: 90%;
+    width: 100%;
   }
 }

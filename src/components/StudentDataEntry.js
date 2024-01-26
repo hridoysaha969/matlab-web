@@ -46,8 +46,6 @@ function StudentDataEntry() {
         setError(err.message);
         setLoading(false);
       }
-
-      console.log(studentData);
     }
   };
   return (

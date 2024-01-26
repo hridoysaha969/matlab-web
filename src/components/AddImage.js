@@ -62,6 +62,8 @@ function AddImage() {
           >
             Upload
           </button>
+
+          {error && <p>{error}</p>}
         </form>
       </div>
     </div>
