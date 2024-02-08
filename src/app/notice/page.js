@@ -38,8 +38,8 @@ function Notice() {
           console.log("No data available");
           setLoading(false);
         }
-      } catch (err) {
-        console.error("Error fetching data:", err.message);
+      } catch (error) {
+        console.error("Error fetching data:", error.message);
       }
     };
     fetchData();
