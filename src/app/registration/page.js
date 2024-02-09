@@ -19,11 +19,16 @@ function page() {
   const [loading, setLoading] = useState(false);
 
   const addLink = () => {
-    regData.linkArr.push(regData.projectLink);
-    setRegData({
-      ...regData,
-      projectLink: "",
-    });
+    console.log(regData.projectLink);
+    if (regData.projectLink.indexOf("https://") !== -1) {
+      regData.linkArr.push(regData.projectLink);
+      setRegData({
+        ...regData,
+        projectLink: "",
+      });
+    } else {
+      setError("Enter a valid URL that contains https://");
+    }
   };
 
   const handleChange = (e) => {
