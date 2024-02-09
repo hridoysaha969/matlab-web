@@ -14,6 +14,7 @@ function page() {
     projectLink: "",
     linkArr: [],
     isEligible: false,
+    isReviewed: false,
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -163,6 +164,13 @@ function page() {
 
           {error && <div className={classes.invalid__feedback}>{error}</div>}
         </form>
+
+        <p className={classes.note__token}>
+          <span className={classes.note__label}>NOTE :</span> Your data will be
+          reviewed for 7 working days after registration. Only registered
+          students will get the <span>premium package</span> of web development
+          course and a proper <span>roadmap/guideline</span>.
+        </p>
       </div>
     </section>
   );
