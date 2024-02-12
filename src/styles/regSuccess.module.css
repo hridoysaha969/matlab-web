@@ -52,3 +52,9 @@
   letter-spacing: 2px;
   text-decoration: none;
 }
+
+@media screen and (max-width: 576px) {
+  .success__msg p {
+    padding: 0;
+  }
+}

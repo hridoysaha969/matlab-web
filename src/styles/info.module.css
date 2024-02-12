@@ -1,0 +1,80 @@
+.info__title {
+  margin: 1.5rem 0;
+  text-align: center;
+  color: #2b91e4;
+  font-size: 1.5rem;
+}
+.info__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.25rem;
+}
+
+.infp__card {
+  background: #fff;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  padding: 1.2rem 1.6rem;
+  box-shadow: 1px 1px 8px rgba(43, 145, 228, 0.3);
+}
+.infp__card h3 {
+  font-size: 1rem;
+  color: rgb(17, 7, 100);
+  margin-bottom: 0.5rem;
+}
+.info__secure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+}
+.link__wrapper {
+  margin: 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.link__wrapper a {
+  text-decoration: none;
+  background: #2b91e4;
+  color: #fff;
+  font-size: 0.65rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+}
+.feed__back {
+  margin-top: 0.3rem;
+}
+.feed__back p {
+  font-size: 0.85rem;
+}
+.feed__back p span {
+  display: inline-block;
+  font-size: 0.65rem;
+  background: rgba(255, 196, 1, 0.5);
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  margin-bottom: 0.4rem;
+}
+.feed__back p span.sts_success {
+  background: rgb(45, 194, 149);
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .info__container {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+}
