@@ -3,6 +3,7 @@ import classes from "@/styles/registration.module.css";
 import { useState } from "react";
 import { db } from "@/config/firebase";
 import { ref, set } from "firebase/database";
+import Success from "@/components/Success";
 
 function page() {
   const [regData, setRegData] = useState({
@@ -18,6 +19,7 @@ function page() {
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const addLink = () => {
     console.log(regData.projectLink);
@@ -73,6 +75,7 @@ function page() {
             isEligible: false,
           });
           setLoading(false);
+          setSuccess(true);
         } catch (err) {
           setError(err.message);
           setLoading(false);
@@ -85,6 +88,7 @@ function page() {
 
   return (
     <section>
+      {success ? <Success /> : null}
       <div className="container">
         <h2 className={classes.title}>Registration Form</h2>
 
