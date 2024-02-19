@@ -14,6 +14,7 @@ function page() {
     projectName: "",
     projectLink: "",
     linkArr: [],
+    siteNameArr: [],
     isEligible: false,
     isReviewed: false,
   });
@@ -22,13 +23,19 @@ function page() {
   const [success, setSuccess] = useState(false);
 
   const addLink = () => {
-    console.log(regData.projectLink);
     if (regData.projectLink.indexOf("https://") !== -1) {
-      regData.linkArr.push(regData.projectLink);
-      setRegData({
-        ...regData,
-        projectLink: "",
-      });
+      if (regData.projectName) {
+        regData.linkArr.push(regData.projectLink);
+        regData.siteNameArr.push(regData.projectName);
+        setRegData({
+          ...regData,
+          projectLink: "",
+          projectName: "",
+        });
+        console.log(regData.linkArr, regData.siteNameArr);
+      } else {
+        setError("Enter project name");
+      }
     } else {
       setError("Enter a valid URL that contains https://");
     }
@@ -43,7 +50,7 @@ function page() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { firstName, lastName, userName, email, projectName, linkArr } =
+    const { firstName, lastName, userName, email, linkArr, siteNameArr } =
       regData;
 
     if (
@@ -51,7 +58,7 @@ function page() {
       !lastName ||
       !userName ||
       !email ||
-      !projectName ||
+      siteNameArr.length < 5 ||
       linkArr.length < 5 ||
       error
     ) {

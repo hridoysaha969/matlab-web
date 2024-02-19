@@ -1,0 +1,61 @@
+.update_section {
+  height: 100vh;
+}
+.wrapper {
+  background: #fff;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  margin-top: 5rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  box-shadow: 1px 1px 8px rgba(0, 110, 255, 0.4);
+  position: relative;
+}
+.wrapper h2 {
+  color: rgb(17, 196, 106);
+  margin-bottom: 1rem;
+}
+.wrapper p {
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+}
+.download_btn {
+  border: none;
+  outline: none;
+  padding: 1rem 1.5rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  background: rgb(17, 196, 106);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+}
+.confetti {
+  width: 250px;
+  height: auto;
+}
+
+@media screen and (max-width: 576px) {
+  .confetti {
+    width: 150px;
+  }
+  .wrapper p {
+    padding: 0;
+    font-size: 0.85rem;
+  }
+  .wrapper h2 {
+    font-size: 1rem;
+  }
+  .download_btn {
+    padding: 1rem 1rem;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+  }
+}
