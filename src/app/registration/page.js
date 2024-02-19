@@ -88,7 +88,9 @@ function page() {
           setLoading(false);
         }
       } else {
-        setError("Username must contain letters and number");
+        setError(
+          "Username must contain letters and number between 5 to 15 character"
+        );
       }
     }
   };
