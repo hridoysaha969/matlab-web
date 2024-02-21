@@ -1,6 +1,7 @@
 .students {
   margin: 2rem 0;
 }
+
 .students__title {
   font-size: 1.25rem;
 }
@@ -37,6 +38,24 @@
   font-size: 0.8rem;
   color: #807e7e;
   margin-top: 0.5rem;
+}
+.view__btn {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  background: #0a8ae6;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 0.65rem;
+}
+.view__btn svg {
+  font-size: 0.85rem;
 }
 
 @media screen and (max-width: 768px) {
