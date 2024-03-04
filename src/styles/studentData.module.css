@@ -11,14 +11,14 @@
   top: 50%;
   left: 50%;
   width: 60%;
-  height: 80%;
+  /* height: 80%; */
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   background: #fff;
-  padding: 1.75rem 1rem;
+  padding: 2.75rem 1rem;
   border-radius: 0.4rem;
   -webkit-border-radius: 0.4rem;
   -moz-border-radius: 0.4rem;
