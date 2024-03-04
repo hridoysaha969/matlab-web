@@ -1,5 +1,6 @@
 import classes from "@/styles/studentData.module.css";
 import { Clear } from "@mui/icons-material";
+import SuccessRate from "./SuccessRate";
 
 function StudentData({ studentList, setIsOpened }) {
   return (
@@ -27,10 +28,7 @@ function StudentData({ studentList, setIsOpened }) {
             <span>Class Activity : </span> <span>N/A</span>
           </p>
         </div>
-        <div className={classes.success_wrapper}>
-          <div className={classes.success_rate}>0%</div>
-          <p>Success Rate!</p>
-        </div>
+        <SuccessRate studentData={studentList} />
       </div>
     </section>
   );
