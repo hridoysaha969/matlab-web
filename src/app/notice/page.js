@@ -50,7 +50,7 @@ function Notice() {
 
       <div className={classes.notice__container}>
         {loading && <p>Loading</p>}
-        {data.reverse().map((val, ind) => (
+        {data.map((val, ind) => (
           <div className={classes.notice__card} key={ind}>
             <div className={classes.card__body}>
               <p>{val.noticeText}</p>
