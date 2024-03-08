@@ -19,6 +19,7 @@
   -o-border-radius: 0.3rem;
   padding: 1.2rem 1.6rem;
   box-shadow: 1px 1px 8px rgba(43, 145, 228, 0.3);
+  align-self: baseline;
 }
 .infp__card h3 {
   font-size: 1rem;
@@ -48,6 +49,13 @@
   -moz-border-radius: 0.2rem;
   -ms-border-radius: 0.2rem;
   -o-border-radius: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.link__wrapper a svg {
+  margin-left: 0.3rem;
+  font-size: 0.75rem;
 }
 .feed__back {
   margin-top: 0.3rem;

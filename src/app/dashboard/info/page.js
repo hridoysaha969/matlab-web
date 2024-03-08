@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { db } from "@/config/firebase";
 import { ref, get } from "firebase/database";
 import Spinner from "@/components/Spinner";
+import { LaunchOutlined } from "@mui/icons-material";
 
 function Info() {
   const [regData, setRegData] = useState([]);
@@ -35,6 +36,26 @@ function Info() {
     fetchStudentData();
   }, []);
 
+  const makeLinkNameArr = (dataObj) => {
+    const arrayOfObjects = [];
+
+    for (
+      let i = 0;
+      i < Math.min(dataObj.linkArr.length, dataObj.siteNameArr.length);
+      i++
+    ) {
+      // Create an object with properties from both arrays
+      const obj = {
+        link: dataObj.linkArr[i],
+        name: dataObj.siteNameArr[i],
+      };
+      // Push the object into the array
+      arrayOfObjects.push(obj);
+    }
+
+    return arrayOfObjects;
+  };
+
   const maskEmail = (email) => {
     // Use regular expression to match username part
     let maskedEmail = email.replace(/(?<=.{4})./g, "*"); // Replace characters after the first 5 characters with asterisks
@@ -58,9 +79,14 @@ function Info() {
                   <span>UserID : {maskEmail(val.userName)}</span>
                 </p>
                 <div className={classes.link__wrapper}>
-                  {val.linkArr.map((link, lInd) => (
-                    <Link key={lInd} href={link} target="_blank">
-                      Site {lInd + 1}
+                  {makeLinkNameArr(val).map((links, ind) => (
+                    <Link
+                      key={ind}
+                      href={links.link}
+                      target="_blank"
+                      className={classes.link__name}
+                    >
+                      {ind + 1}. {links.name} <LaunchOutlined />
                     </Link>
                   ))}
                 </div>
@@ -74,7 +100,12 @@ function Info() {
                     )}
                   </p>
                   <p>
-                    Eligible : <span>Under Review</span>
+                    Eligible :{" "}
+                    {val.isEligible ? (
+                      <span className={classes.sts_success}>Eligible</span>
+                    ) : (
+                      <span>Under Review</span>
+                    )}
                   </p>
                 </div>
               </div>
