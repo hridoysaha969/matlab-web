@@ -5,9 +5,23 @@ import StudentDataEntry from "@/components/StudentDataEntry";
 import StudentResultEntry from "@/components/StudentResultEntry";
 import classes from "@/styles/dashboard.module.css";
 import { useState } from "react";
+import { signOut } from "firebase/auth";
+import { auth } from "@/config/firebase";
+import { useRouter } from "next/navigation";
 
 function Dashboard() {
+  const router = useRouter();
   const [resultMood, setResultMood] = useState(false);
+
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+      router.push("/");
+    } catch (error) {
+      console.error("Error signing out:", error.message);
+    }
+  };
+
   return (
     <div className="container">
       <h1 className={classes.dash__title}>Admin Dashboard</h1>
@@ -30,6 +44,10 @@ function Dashboard() {
       {resultMood ? <StudentResultEntry /> : <StudentDataEntry />}
       <Notice />
       <AddImage />
+
+      <button className={classes.sign__out} onClick={handleSignOut}>
+        Signout
+      </button>
     </div>
   );
 }

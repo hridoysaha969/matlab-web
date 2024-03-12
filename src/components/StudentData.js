@@ -1,6 +1,7 @@
 import classes from "@/styles/studentData.module.css";
 import { Clear } from "@mui/icons-material";
 import SuccessRate from "./SuccessRate";
+import { useEffect } from "react";
 
 function StudentData({ studentList, setIsOpened }) {
   return (
@@ -25,7 +26,7 @@ function StudentData({ studentList, setIsOpened }) {
             <span>Student ID : </span> <span>{studentList.studentID}</span>
           </p>
           <p>
-            <span>Class Activity : </span> <span>N/A</span>
+            <span>Class Activity : </span> <span>0 out of 10</span>
           </p>
         </div>
         <SuccessRate studentData={studentList} />

@@ -1,0 +1,61 @@
+.content_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 68, 51, 0.6);
+  z-index: 100;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+.input__wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.2rem;
+  margin-bottom: 1.25rem;
+}
+.input__wrap input {
+  border: 1px solid #021e2e;
+  outline: none;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+}
+.update__btn,
+.cancel__btn {
+  background: #0bc26c;
+  color: #fff;
+  padding: 0.65rem 1rem;
+  border: none;
+  outline: none;
+  margin-right: 1rem;
+  border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+}
+.cancel__btn {
+  background: #cc0839;
+  color: #fff;
+}

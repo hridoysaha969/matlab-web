@@ -10,7 +10,8 @@
 }
 .data__btn,
 .result__btn,
-.submit__btn {
+.submit__btn,
+.sign__out {
   border: none;
   outline: none;
   padding: 0.75rem 1.25rem;
@@ -35,6 +36,11 @@
 .submit__btn {
   background: #15b8d4;
   color: #fff;
+}
+.sign__out {
+  background: #e0043b;
+  color: #fff;
+  margin-top: 1rem;
 }
 .submit__btn:disabled {
   background: rgb(151, 151, 151);

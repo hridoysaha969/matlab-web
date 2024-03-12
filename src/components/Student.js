@@ -3,13 +3,17 @@ import { useEffect, useState } from "react";
 import { db } from "@/config/firebase";
 import classes from "@/styles/student.module.css";
 import { get, ref } from "firebase/database";
-import { ArrowForward } from "@mui/icons-material";
+import { ArrowForward, BorderColor } from "@mui/icons-material";
 import StudentData from "./StudentData";
+import { auth } from "@/config/firebase";
+import UpdateStudent from "./UpdateStudent";
 
 function Students() {
   const [studentList, setStudentList] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isOpened, setIsOpened] = useState(false);
+  const [admin, setAdmin] = useState(false);
+  const [update, setUpdate] = useState(false);
 
   // State to store the clicked value
   const [clickedValue, setClickedValue] = useState(null);
@@ -42,6 +46,10 @@ function Students() {
       }
     }
 
+    auth.onAuthStateChanged((user) => {
+      user ? setAdmin(true) : setAdmin(false);
+    });
+
     fetchStudentData();
   }, []);
 
@@ -53,13 +61,20 @@ function Students() {
         {studentList.length !== 0 && !loading ? (
           studentList.map((stdnt, ind) => (
             <div key={ind} className={classes.student__card}>
-              <h4 className={classes.s__name}>{stdnt.studentName}</h4>
-              {/* <p className={classes.batch__id}>Batch ID : {stdnt.batchID}</p>
-              <p className={classes.batch__id}>Roll : {stdnt.roll}</p>
-              <div className={classes.footer}>
-                <span>Student ID : {stdnt.studentID}</span>
-                <span>Point : 0</span>
-              </div> */}
+              <h4 className={classes.s__name}>
+                <span>{stdnt.studentName}</span>{" "}
+                {admin ? (
+                  <span
+                    className={classes.edit}
+                    onClick={() => {
+                      setUpdate(true);
+                      setClickedValue(stdnt);
+                    }}
+                  >
+                    <BorderColor />
+                  </span>
+                ) : null}
+              </h4>
               <button
                 className={classes.view__btn}
                 onClick={() => handleClick(stdnt)}
@@ -70,6 +85,12 @@ function Students() {
                 <StudentData
                   studentList={clickedValue}
                   setIsOpened={setIsOpened}
+                />
+              ) : null}
+              {update ? (
+                <UpdateStudent
+                  setUpdate={setUpdate}
+                  studentData={clickedValue}
                 />
               ) : null}
             </div>
