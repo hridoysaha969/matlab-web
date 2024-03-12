@@ -17,6 +17,7 @@ function Dashboard() {
     try {
       await signOut(auth);
       router.push("/");
+      Cookies.remove("7uDFVrhs6");
     } catch (error) {
       console.error("Error signing out:", error.message);
     }

@@ -59,6 +59,51 @@
   background: #cc0839;
   color: #fff;
 }
+.update__btn:disabled {
+  background: gray;
+  color: #fff;
+}
+
+.popup__message {
+  width: max-content;
+  padding: 0.4rem 1rem;
+  background: #0bc26c;
+  color: #fff;
+  border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+}
+.popup__message span:last-child {
+  display: inline-block;
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+}
+.popup__message span svg {
+  font-size: 0.95rem;
+}
+.popup__message.active {
+  top: 1.2rem;
+}
 
 @media screen and (max-width: 768px) {
   .input__wrap {
@@ -66,12 +111,12 @@
   }
   .content {
     width: 100%;
-    top: 3rem;
+    top: 50%;
     left: 0;
-    transform: translate(0, 0);
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
   }
 }

@@ -26,7 +26,8 @@ function StudentData({ studentList, setIsOpened }) {
             <span>Student ID : </span> <span>{studentList.studentID}</span>
           </p>
           <p>
-            <span>Class Activity : </span> <span>0 out of 10</span>
+            <span>Class Activity : </span>{" "}
+            <span>{studentList.classActivity} out of 10</span>
           </p>
         </div>
         <SuccessRate studentData={studentList} />
