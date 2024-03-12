@@ -59,3 +59,9 @@
   background: #cc0839;
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  .input__wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
