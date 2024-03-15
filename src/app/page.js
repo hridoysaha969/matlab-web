@@ -14,7 +14,7 @@ import Students from "@/components/Student";
 import Link from "next/link";
 
 export default function Home() {
-  const targetDate = new Date("2024-03-15T17:59:59");
+  const targetDate = new Date("2024-03-16T17:59:59");
   return (
     <div className="container">
       <div className={classes.timer__wrapper}>
