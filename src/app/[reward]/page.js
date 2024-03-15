@@ -35,12 +35,18 @@ function Reward({ params }) {
           </div>
 
           <div className={classes.note}>
-            <p>
-              <span className={classes.note__mark}>NOTE:</span> Student who will
-              pass all the exams with valuable mark will get this{" "}
-              <span>Portfolio Website</span> as reward
-            </p>
+            <h3>What will you get?</h3>
+            <ul className={classes.reward__list}>
+              <li>Responsive & animated Portfolio website</li>
+              <li>Love Calculator</li>
+              <li>Password Generator</li>
+              <li>
+                ToDo App <span>Only elegible student will get this.</span>
+              </li>
+            </ul>
           </div>
+
+          <div></div>
 
           <div className={classes.about__mentor}>
             <h2 className={classes.title}>About Admin</h2>
@@ -48,7 +54,7 @@ function Reward({ params }) {
               <Person /> <span>Hridoy Saha</span>
             </p>
             <p className={classes.category}>
-              <Tag /> <span>Web & App Developeer</span>
+              <Tag /> <span>Web & App Developer</span>
             </p>
             <p className={classes.email}>
               <Email /> <span>hridoysaha969@gmail.com</span>

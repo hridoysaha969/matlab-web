@@ -56,6 +56,51 @@
   font-weight: 500;
   color: #00143a;
 }
+.speak {
+  display: flex;
+  align-items: center;
+}
+.speak::after {
+  content: "New";
+  background: #0a8ae6;
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+  color: #fff;
+  font-size: 0.5rem;
+}
+/* .speak_btn {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+} */
+.speak_btn svg {
+  color: #0a8ae6;
+  /*font-size: 1.15rem;
+  */
+  filter: drop-shadow(1px 1px 3px rgba(0, 108, 158, 0.65));
+  -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 108, 158, 0.65));
+}
+/* .speak__popup_container {
+
+} */
+.speak__popup {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 1.25rem;
+  background: rgba(0, 20, 58, 0.75);
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
 .success_wrapper {
   display: flex;
   flex-direction: column;
@@ -89,10 +134,14 @@
     width: 100%;
     height: 100%;
   }
-  .basic_data {
+  .basic_data,
+  .speak__popup {
     width: 100%;
   }
   .basic_data p {
     font-size: 0.85rem;
+  }
+  .speak__popup {
+    width: 95%;
   }
 }

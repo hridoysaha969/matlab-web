@@ -6,20 +6,23 @@
 }
 .note {
   margin-top: 2rem;
-  font-style: italic;
-  font-size: 0.85rem;
-  background-color: rgba(207, 67, 57, 0.3);
-  width: fit-content;
 }
-.note span {
-  background-color: #2050ec;
-  color: #fff;
+.note h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #080430;
 }
-.note .note__mark {
-  background: rgba(237, 241, 17, 0.4);
-  color: #000;
+.reward__list {
+  padding: 0 1.25rem;
+}
+.reward__list li {
   font-size: 0.95rem;
-  font-style: normal;
+  font-weight: 500;
+  color: #080430;
+}
+.reward__list li span {
+  font-size: 0.65rem;
+  color: #0a8ae6;
 }
 
 .about__mentor {
