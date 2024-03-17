@@ -167,11 +167,7 @@ function page() {
                 ))}
             </label>
           </div>
-          <button
-            type="submit"
-            className={classes.btn_submit}
-            disabled={!success}
-          >
+          <button type="submit" className={classes.btn_submit}>
             Submit
           </button>
 

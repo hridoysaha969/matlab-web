@@ -20,9 +20,9 @@ export default function Home() {
       <div className={classes.timer__wrapper}>
         {/* <h3 className={classes.timer__title}>Registration is in progress</h3> */}
         <DynamicCountdownTimer targetDate={targetDate} />
-        {/* <Link href="/registration" className={classes.timer__link}>
+        <Link href="/registration" className={classes.timer__link}>
           Apply Now <ArrowForward />
-        </Link> */}
+        </Link>
       </div>
       <Banner />
       <ImageSlider />
