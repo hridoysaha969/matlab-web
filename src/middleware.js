@@ -8,6 +8,14 @@ export default function middleware(req) {
     const absoluteUrl = new URL("/admin", req.nextUrl.origin);
     return NextResponse.redirect(absoluteUrl.toString());
   }
+  if (!verify && url.includes("/dashboard/info")) {
+    const absoluteUrl = new URL("/admin", req.nextUrl.origin);
+    return NextResponse.redirect(absoluteUrl.toString());
+  }
+  if (!verify && url.includes("/registration")) {
+    const absoluteUrl = new URL("/result", req.nextUrl.origin);
+    return NextResponse.redirect(absoluteUrl.toString());
+  }
 
   if (verify && url.includes("/admin")) {
     const absoluteUrl = new URL("/", req.nextUrl.origin);

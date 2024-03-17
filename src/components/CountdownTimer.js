@@ -48,7 +48,7 @@ const CountdownTimer = ({ targetDate }) => {
       {timerComponents.length ? (
         timerComponents
       ) : (
-        <span>Registration Finished</span>
+        <span className={classes.time__over}>Registration Finished</span>
       )}
     </div>
   );

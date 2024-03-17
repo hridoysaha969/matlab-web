@@ -1,8 +1,10 @@
+import CheckForm from "@/components/CheckForm";
 import ResultForm from "@/components/ResultForm";
 import classes from "@/styles/result.module.css";
 function Result() {
   return (
     <div className="container">
+      <CheckForm />
       <div className={classes.result__section}>
         <h2 className={classes.result__title}>Search your Result</h2>
 

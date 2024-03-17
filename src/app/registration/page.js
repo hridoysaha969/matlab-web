@@ -170,7 +170,7 @@ function page() {
           <button
             type="submit"
             className={classes.btn_submit}
-            disabled={loading}
+            disabled={!success}
           >
             Submit
           </button>
