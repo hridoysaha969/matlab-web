@@ -5,16 +5,18 @@ import { useRouter } from "next/navigation";
 
 function CheckForm() {
   const [username, setUsername] = useState("");
+  const [roll, setRoll] = useState("");
   const [error, setError] = useState("");
   const { push } = useRouter();
 
   const handleClick = (e) => {
-    if (!username) {
-      setError("Please enter a valid roll");
+    if (!username || !roll) {
+      setError("Please enter a valid roll or username");
     } else {
       setUsername("");
-      push(`/result/00/${username}`);
-      console.log(`/result/00/${username}`);
+      setRoll("");
+      push(`/result/${roll}/${username}`);
+      console.log(`/result/${roll}/${username}`);
     }
   };
 
@@ -29,6 +31,16 @@ function CheckForm() {
           placeholder="@username"
           onChange={(e) => {
             setUsername(e.target.value);
+            setError("");
+          }}
+          className={error && classes.invalid}
+        />
+        <input
+          type="number"
+          value={roll}
+          placeholder="Your roll"
+          onChange={(e) => {
+            setRoll(e.target.value);
             setError("");
           }}
           className={error && classes.invalid}
