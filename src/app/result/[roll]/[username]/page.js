@@ -3,7 +3,6 @@ import classes from "@/styles/status.module.css";
 import { get, ref } from "firebase/database";
 import { useEffect, useState } from "react";
 import { db } from "@/config/firebase";
-import UserData from "@/components/UserData";
 import Spinner from "@/components/Spinner";
 import Link from "next/link";
 import Profile from "@/components/Profile";
