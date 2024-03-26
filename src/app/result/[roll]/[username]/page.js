@@ -6,6 +6,7 @@ import { db } from "@/config/firebase";
 import UserData from "@/components/UserData";
 import Spinner from "@/components/Spinner";
 import Link from "next/link";
+import Profile from "@/components/Profile";
 
 function Username({ params }) {
   const [loading, setLoading] = useState(false);
@@ -42,7 +43,8 @@ function Username({ params }) {
       {loading ? (
         <Spinner />
       ) : data ? (
-        <UserData data={data} />
+        // <UserData data={data} />
+        <Profile data={data} />
       ) : (
         <div className={classes.incorrect__wrapper}>
           <p>
