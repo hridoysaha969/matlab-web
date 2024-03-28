@@ -1,10 +1,20 @@
+:root {
+  --primary-color: #5931ff;
+  --primary-alt-color: #ebe6ff;
+  --body-color: #cfd9e8;
+  --container-color: #f5f6f7;
+  --white-color: #ffffff;
+  --dark-color: #131313;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  background-color: #edf7fc;
+  background-color: var(--body-color);
+  font-family: sans-serif;
 }
 .container {
   width: 900px;

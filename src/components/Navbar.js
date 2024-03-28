@@ -1,4 +1,8 @@
-import { Home, Assignment, NotificationsActive } from "@mui/icons-material";
+import {
+  HomeOutlined,
+  AssignmentOutlined,
+  NotificationsActiveOutlined,
+} from "@mui/icons-material";
 import classes from "@/styles/navbar.module.css";
 import Link from "next/link";
 function Navbar() {
@@ -7,19 +11,21 @@ function Navbar() {
       <div className="container">
         <div className={classes.nav__menu}>
           <Link href="/">
-            <h3>Matlab Web</h3>
+            <h3>
+              Matlab <span>Web</span>
+            </h3>
           </Link>
           <div className={classes.accounts}>
             <Link href="/">
-              <Home />
+              <HomeOutlined />
               <small>Home</small>
             </Link>
             <Link href="/result">
-              <Assignment />
+              <AssignmentOutlined />
               <small>Result</small>
             </Link>
             <Link href="/notice">
-              <NotificationsActive />
+              <NotificationsActiveOutlined />
               <small>Notice</small>
             </Link>
           </div>

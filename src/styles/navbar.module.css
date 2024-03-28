@@ -1,7 +1,8 @@
 .nav__header {
-  background-color: #100953;
-  color: #fff;
+  background-color: var(--white-color);
+  color: var(--primary-color);
   padding: 1rem 0;
+  border-bottom: 1px solid var(--primary-color);
 }
 .nav__menu {
   display: flex;
@@ -9,8 +10,11 @@
   align-items: center;
 }
 .nav__menu a {
-  color: #fff;
+  color: var(--primary-color);
   text-decoration: none;
+}
+.nav__menu a h3 span {
+  color: var(--dark-color);
 }
 .accounts {
   display: flex;
@@ -25,4 +29,56 @@
 }
 .accounts a small {
   font-size: 0.65rem;
+}
+
+@media screen and (max-width: 600px) {
+  .accounts {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    padding: 1rem 0.85rem;
+    border-radius: 00.65rem;
+    -webkit-border-radius: 00.65rem;
+    -moz-border-radius: 00.65rem;
+    -ms-border-radius: 00.65rem;
+    -o-border-radius: 00.65rem;
+    background: var(--white-color);
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: -1px -1px 5px var(--body-color);
+  }
+  .accounts a small {
+    display: none;
+  }
+  .accounts a:first-child {
+    order: 2;
+    background: var(--primary-color);
+    color: var(--white-color);
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 8px solid var(--body-color);
+    margin-top: -2.5rem;
+  }
+  .accounts a:nth-child(2) {
+    order: 1;
+  }
+  .accounts a:last-child {
+    order: 3;
+  }
 }
