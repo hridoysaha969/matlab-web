@@ -55,6 +55,9 @@
     align-items: center;
     box-shadow: -1px -1px 5px var(--body-color);
   }
+  .accounts a {
+    margin-right: 0;
+  }
   .accounts a small {
     display: none;
   }

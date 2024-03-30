@@ -55,26 +55,16 @@ function Students() {
 
   return (
     <div className={classes.students}>
-      <h2 className={classes.students__title}>Students</h2>
+      <h2 className={classes.students__title}>
+        Our <span>Students</span>
+      </h2>
 
       <div className={classes.student__list}>
         {studentList.length !== 0 && !loading ? (
           studentList.map((stdnt, ind) => (
             <div key={ind} className={classes.student__card}>
-              <h4 className={classes.s__name}>
-                <span>{stdnt.studentName}</span>{" "}
-                {admin ? (
-                  <span
-                    className={classes.edit}
-                    onClick={() => {
-                      setUpdate(true);
-                      setClickedValue(stdnt);
-                    }}
-                  >
-                    <BorderColor />
-                  </span>
-                ) : null}
-              </h4>
+              <h3 className={classes.roll__tag}>{stdnt.roll}</h3>
+              <h4 className={classes.s__name}>{stdnt.studentName}</h4>
               <button
                 className={classes.view__btn}
                 onClick={() => handleClick(stdnt)}

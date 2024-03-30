@@ -39,12 +39,17 @@ body {
 
 .slick-prev::before,
 .slick-next::before {
-  background: rgb(0, 162, 255) !important;
+  /* background: rgb(0, 162, 255) !important; */
+  color: var(--primary-color) !important;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+}
+
+.slick-slider {
+  width: 380px;
 }
 
 .spinner-container {
@@ -80,5 +85,9 @@ body {
 @media screen and (max-width: 768px) {
   .container {
     width: 99%;
+  }
+  .slick-slider {
+    max-width: 70%;
+    margin: 0 auto;
   }
 }

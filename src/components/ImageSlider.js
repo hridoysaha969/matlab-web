@@ -40,16 +40,30 @@ const ImageSlider = () => {
 
   return (
     <div>
-      <h2 className={classes.slider__title}>Events </h2>
+      <h2 className={classes.slider__title}>
+        Our <span>Events</span>
+      </h2>
       <div className={classes.slider__wrapper}>
-        {loading && <Spinner />}
-        <Slider {...settings}>
-          {imageList.map((url, ind) => (
-            <div key={ind}>
-              <img src={url} className={classes.slider__img} />
-            </div>
-          ))}
-        </Slider>
+        <div className={classes.left}>
+          <h2>Special Moments</h2>
+          <p>
+            Captured some special events. Some memories with the traine and
+            mentors. Sharing some time and moment.
+          </p>
+        </div>
+        <div>
+          {loading ? (
+            <Spinner />
+          ) : (
+            <Slider {...settings}>
+              {imageList.map((url, ind) => (
+                <div key={ind}>
+                  <img src={url} className={classes.slider__img} />
+                </div>
+              ))}
+            </Slider>
+          )}
+        </div>
       </div>
     </div>
   );

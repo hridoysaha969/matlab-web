@@ -1,4 +1,5 @@
 import classes from "@/styles/video.module.css";
+import { ArrowForward } from "@mui/icons-material";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,7 +20,7 @@ function Video({ videoData }) {
           href={`/${videoData.videoId}`}
           className={`btn ${classes.btn_video}`}
         >
-          More
+          More <ArrowForward />
         </Link>
       </div>
     </div>

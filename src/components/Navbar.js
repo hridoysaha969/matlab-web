@@ -12,7 +12,7 @@ function Navbar() {
         <div className={classes.nav__menu}>
           <Link href="/">
             <h3>
-              Matlab <span>Web</span>
+              <span>Matlab</span> Web
             </h3>
           </Link>
           <div className={classes.accounts}>

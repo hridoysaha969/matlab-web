@@ -15,7 +15,9 @@ const videosArr = [
 function Reward() {
   return (
     <div className={classes.reward}>
-      <h2 className={classes.reward__title}>Rewards</h2>
+      <h2 className={classes.reward__title}>
+        Get <span>Rewards</span>
+      </h2>
 
       <div className={classes.video__container}>
         {videosArr.map((data, ind) => (

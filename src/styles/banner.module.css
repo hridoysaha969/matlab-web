@@ -42,11 +42,16 @@
   color: var(--white-color);
   text-transform: uppercase;
 }
+.wrapper .right img {
+  width: 400px;
+  height: initial;
+}
 
 @media screen and (max-width: 600px) {
   .wrapper {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 1rem;
+    /* align-items: flex-start; */
   }
   .wrapper .left {
     width: 100%;
@@ -58,7 +63,7 @@
     font-size: 0.9rem;
   }
   .wrapper .right img {
-    display: none;
+    max-width: 100%;
   }
   .btn__header {
     font-size: 0.75rem;
