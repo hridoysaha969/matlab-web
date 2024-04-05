@@ -4,6 +4,36 @@ import ReactPlayer from "react-player/youtube";
 import classes from "@/styles/rewardPage.module.css";
 import { Email, Language, Person, Tag } from "@mui/icons-material";
 import Link from "next/link";
+import Accordion from "@/components/Accordion";
+import PdfBtn from "@/components/PdfBtn";
+
+const items = [
+  {
+    title: "Whate are those reward?",
+    content:
+      "There are three types of reward. One is free for all users, another will be provided after scoring remarkable point and the last one will be provided after achieving success on freelancing.",
+  },
+  {
+    title: "Who is this reward for?",
+    content:
+      "Free rewards are available for all students or anyone who visit this website. Other reward are only for Her Power Project trainee",
+  },
+  {
+    title: "How can I get this?",
+    content:
+      "You have to get admitted into Her Power Project Web Development batch. Provide all the necessaries and legal information. Complete full course and get those rewards",
+  },
+  {
+    title: "Is there any other way to get this?",
+    content:
+      "You have to purchase our premium membership of 'Matlab Web' and you can get all the access of this course.",
+  },
+  {
+    title: "How can I purchase premium membership?",
+    content:
+      "This feature is not available right now. We are working on it, the feature will be available soon. Stay with us.",
+  },
+];
 
 function Reward({ params }) {
   const [loading, setLoading] = useState(true);
@@ -13,6 +43,7 @@ function Reward({ params }) {
     }
   }, []);
   const videoURL = `https://www.youtube.com/watch?v=${params.reward}`;
+
   return (
     <>
       {!loading && (
@@ -34,19 +65,28 @@ function Reward({ params }) {
             />
           </div>
 
-          <div className={classes.note}>
-            <h3>What will you get?</h3>
-            <ul className={classes.reward__list}>
-              <li>Responsive & animated Portfolio website</li>
-              <li>Love Calculator</li>
-              <li>Password Generator</li>
-              <li>
-                ToDo App <span>Only elegible student will get this.</span>
-              </li>
-            </ul>
+          <div className={classes.resource__container}>
+            <h2 className={classes.faq}>
+              Get <span>Resources</span>
+            </h2>
+
+            <div className={classes.resource__tab}>
+              <p>
+                Here is your Ultimate resources of Web Design and Development
+                journey. Hope that it will help you to become successfull.{" "}
+              </p>
+              <div className={classes.btn__wrap}>
+                <PdfBtn />
+              </div>
+            </div>
           </div>
 
-          <div></div>
+          <div>
+            <h2 className={classes.faq}>
+              F<span>A</span>Q
+            </h2>
+            <Accordion items={items} />
+          </div>
 
           <div className={classes.about__mentor}>
             <h2 className={classes.title}>About Admin</h2>

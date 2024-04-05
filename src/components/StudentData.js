@@ -2,6 +2,7 @@ import classes from "@/styles/studentData.module.css";
 import { Clear, RecordVoiceOver } from "@mui/icons-material";
 import SuccessRate from "./SuccessRate";
 import { useRef, useState } from "react";
+import PdfBtn from "./PdfBtn";
 
 function StudentData({ studentList, setIsOpened }) {
   const utteranceRef = useRef(null);

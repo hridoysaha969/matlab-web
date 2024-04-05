@@ -56,7 +56,7 @@ function Students() {
   return (
     <div className={classes.students}>
       <h2 className={classes.students__title}>
-        Our <span>Students</span>
+        Our <span>Traine</span>
       </h2>
 
       <div className={classes.student__list}>

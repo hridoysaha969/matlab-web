@@ -4,6 +4,61 @@
 .video__player div {
   margin: 0 auto;
 }
+.resource__container {
+  padding: 1rem 0;
+}
+.resource__tab p {
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+}
+.btn__wrap {
+  text-align: center;
+  margin-top: 1rem;
+}
+.download__btn {
+  border: none;
+  outline: none;
+  padding: 0.65rem 1rem;
+  background-color: var(--primary-color);
+  border-radius: 0.4rem;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+  color: var(--white-color);
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+.faq {
+  font-size: 1.5rem;
+  margin: 2.5rem 0;
+  text-align: center;
+  color: var(--dark-color);
+  position: relative;
+}
+.faq span {
+  color: var(--primary-color);
+}
+.faq::after {
+  content: "";
+  display: inline-block;
+  width: 4rem;
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+}
 .note {
   margin-top: 2rem;
 }
@@ -79,5 +134,8 @@
   .video__player div {
     width: 300px !important;
     height: 180px !important;
+  }
+  .resource__tab p {
+    padding: 0;
   }
 }
