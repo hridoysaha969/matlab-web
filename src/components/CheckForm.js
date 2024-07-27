@@ -22,29 +22,37 @@ function CheckForm() {
 
   return (
     <div className={classes.check__status}>
-      <h2>Check Your Overall Status</h2>
+      <h2>Profile</h2>
 
       <div className={classes.check__form__wrapper}>
-        <input
-          type="text"
-          value={username}
-          placeholder="@username"
-          onChange={(e) => {
-            setUsername(e.target.value);
-            setError("");
-          }}
-          className={error && classes.invalid}
-        />
-        <input
-          type="number"
-          value={roll}
-          placeholder="Your roll"
-          onChange={(e) => {
-            setRoll(e.target.value);
-            setError("");
-          }}
-          className={error && classes.invalid}
-        />
+        <label className={classes.form_check_label}>
+          Username
+          <input
+            type="text"
+            value={username}
+            placeholder="e.g. john123"
+            onChange={(e) => {
+              setUsername(e.target.value);
+              setError("");
+            }}
+            className={error && classes.invalid}
+          />
+        </label>
+
+        <label className={classes.form_check_label}>
+          Roll
+          <input
+            type="number"
+            value={roll}
+            placeholder="valid roll (1-20)"
+            onChange={(e) => {
+              setRoll(e.target.value);
+              setError("");
+            }}
+            className={error && classes.invalid}
+          />
+        </label>
+
         <button onClick={handleClick}>Check</button>
       </div>
     </div>

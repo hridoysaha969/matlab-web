@@ -43,7 +43,7 @@ function ResultForm() {
           type="number"
           name="sRoll"
           value={roll}
-          placeholder="Your Roll"
+          placeholder="valid roll (1-20)"
           onChange={handleChange}
         />
       </label>

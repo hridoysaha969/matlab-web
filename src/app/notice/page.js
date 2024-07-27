@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { db } from "@/config/firebase";
 import { ref, get } from "firebase/database";
 import classes from "@/styles/noticeCard.module.css";
+import Image from "next/image";
+import hridoySaha from "../../../public/hridoy_saha.jpeg";
 
 const months = [
   "January",
@@ -50,20 +52,34 @@ function Notice() {
 
       <div className={classes.notice__container}>
         {loading && <p>Loading</p>}
+
         {data.map((val, ind) => (
           <div className={classes.notice__card} key={ind}>
+            <div className={classes.card_header}>
+              <Image
+                src={hridoySaha}
+                className={classes.card_header_img}
+                width={50}
+                height={50}
+                alt="Hridoy Saha"
+              />
+              <div className={classes.card_header_text}>
+                <h3 className={classes.card_header_title}>Hridoy Saha</h3>
+                <span className={classes.card_header_title_subtitle}>
+                  {`${getMonthFromDateString(val.date).getDate()} ${
+                    months[getMonthFromDateString(val.date).getMonth()]
+                  }, `}{" "}
+                  {getMonthFromDateString(val.date).getFullYear()}{" "}
+                </span>
+              </div>
+            </div>
             <div className={classes.card__body}>
               <p>{val.noticeText}</p>
             </div>
-            <div className={classes.card__footer}>
-              <span>
-                {`${getMonthFromDateString(val.date).getDate()} ${
-                  months[getMonthFromDateString(val.date).getMonth()]
-                }, `}{" "}
-                {getMonthFromDateString(val.date).getFullYear()}{" "}
-              </span>
+            {/* <div className={classes.card__footer}>
+              
               <span>by Hridoy Saha</span>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
