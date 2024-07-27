@@ -20,7 +20,12 @@ function Banner() {
             <button className={classes.btn__header}>Read More</button>
           </div>
           <div className={classes.right}>
-            <Image src={slide2} width={200} alt="Hridoy Saha Developer" />
+            <Image
+              src={slide2}
+              width={200}
+              alt="Hridoy Saha Developer"
+              priority
+            />
           </div>
         </div>
       </div>

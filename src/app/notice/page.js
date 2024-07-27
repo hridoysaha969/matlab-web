@@ -62,6 +62,7 @@ function Notice() {
                 width={50}
                 height={50}
                 alt="Hridoy Saha"
+                priority
               />
               <div className={classes.card_header_text}>
                 <h3 className={classes.card_header_title}>Hridoy Saha</h3>
