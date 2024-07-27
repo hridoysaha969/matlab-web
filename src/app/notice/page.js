@@ -76,10 +76,6 @@ function Notice() {
             <div className={classes.card__body}>
               <p>{val.noticeText}</p>
             </div>
-            {/* <div className={classes.card__footer}>
-              
-              <span>by Hridoy Saha</span>
-            </div> */}
           </div>
         ))}
       </div>
