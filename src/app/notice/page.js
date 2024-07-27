@@ -4,7 +4,7 @@ import { db } from "@/config/firebase";
 import { ref, get } from "firebase/database";
 import classes from "@/styles/noticeCard.module.css";
 import Image from "next/image";
-import hridoySaha from "../../../public/hridoy_saha.jpeg";
+import hridoySaha from "../../../public/hridoy-saha.png";
 
 const months = [
   "January",
