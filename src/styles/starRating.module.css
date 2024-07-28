@@ -1,0 +1,14 @@
+.star_rating {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.15rem 0 1rem 0;
+}
+.star_rating p {
+  display: none;
+}
+.small_star span svg {
+  color: #ffa534;
+  font-size: 0.85rem;
+}

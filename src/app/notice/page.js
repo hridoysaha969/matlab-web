@@ -55,7 +55,7 @@ function Notice() {
 
         {data.map((val, ind) => (
           <div className={classes.notice__card} key={ind}>
-            <div className={classes.card_header}>
+            <a href="/mentors" className={classes.card_header}>
               <Image
                 src={hridoySaha}
                 className={classes.card_header_img}
@@ -73,7 +73,7 @@ function Notice() {
                   {getMonthFromDateString(val.date).getFullYear()}{" "}
                 </span>
               </div>
-            </div>
+            </a>
             <div className={classes.card__body}>
               <p>{val.noticeText}</p>
             </div>
